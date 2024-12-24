@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Music2, BookOpen } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Music2, BookOpen, Brain } from "lucide-react";
 
 export const Navigation = () => {
   const socialLinks = [
@@ -9,6 +9,7 @@ export const Navigation = () => {
     { icon: <Mail className="w-5 h-5" />, href: "mailto:your.email@example.com", label: "Email" },
     { icon: <Music2 className="w-5 h-5" />, href: "https://soundcloud.com/yourusername", label: "SoundCloud" },
     { icon: <BookOpen className="w-5 h-5" />, href: "https://goodreads.com/yourusername", label: "Goodreads" },
+    { icon: <Brain className="w-5 h-5" />, href: "https://huggingface.co/yourusername", label: "HuggingFace" },
   ];
 
   return (

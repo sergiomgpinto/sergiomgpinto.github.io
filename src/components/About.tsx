@@ -1,28 +1,35 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Users, FileText, Briefcase } from "lucide-react";
+import { GraduationCap, Users, FileText, Briefcase, Code2, Brain, Database, Globe } from "lucide-react";
 
 export const About = () => {
   const achievements = [
     {
       icon: <GraduationCap className="w-6 h-6" />,
-      title: "Master's Degree",
-      description: "Completing in June 2024"
+      title: "Master's in AI",
+      description: "Specializing in humor understanding and generation in MLLMs"
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Published Research",
+      description: "AI-mediated Meme Generation for Misinformation Correction"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Teaching Experience",
-      description: "Very Good student evaluations"
+      description: "Machine Learning & Logic for Programming"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Research Paper",
-      description: "Meme generation for misinformation correction"
-    },
-    {
-      icon: <Briefcase className="w-6 h-6" />,
-      title: "Career Goal",
-      description: "Seeking ML internship positions for July 2025"
+      icon: <Brain className="w-6 h-6" />,
+      title: "Research Focus",
+      description: "Low-level inference optimization in LLMs"
     }
+  ];
+
+  const languages = [
+    { name: "Portuguese", level: "Native", progress: 100 },
+    { name: "English", level: "Professional Working", progress: 90 },
+    { name: "French", level: "Basic", progress: 40 },
+    { name: "German", level: "Learning", progress: 20 }
   ];
 
   return (
@@ -48,8 +55,8 @@ export const About = () => {
             <div className="prose prose-invert max-w-none">
               <p className="text-lg text-muted-foreground">
                 I'm passionate about artificial intelligence and its potential to transform our world. 
-                Currently pursuing expertise in machine learning and deep learning, with a focus on 
-                natural language processing and computer vision.
+                Currently specializing in Machine Learning and Deep Learning at Instituto Superior Técnico, 
+                with a focus on humor understanding and generation in Large Language Models.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -66,6 +73,23 @@ export const About = () => {
                   <h3 className="font-semibold text-white mb-1">{achievement.title}</h3>
                   <p className="text-sm text-muted-foreground">{achievement.description}</p>
                 </motion.div>
+              ))}
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-white">Languages</h3>
+              {languages.map((language) => (
+                <div key={language.name} className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-white">{language.name}</span>
+                    <span className="text-muted-foreground">{language.level}</span>
+                  </div>
+                  <div className="h-2 bg-black/20 rounded-full">
+                    <div 
+                      className="h-full bg-primary rounded-full transition-all duration-500"
+                      style={{ width: `${language.progress}%` }}
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </motion.div>

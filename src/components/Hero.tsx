@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
+import { Download } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -28,20 +30,21 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex justify-center space-x-4"
+            className="flex flex-col md:flex-row justify-center gap-4 items-center"
           >
             <a 
               href="#contact" 
-              className="bg-primary text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
+              className="bg-primary text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors w-full md:w-auto"
             >
-              Get in Touch
+              Available for ML Internships (July 2025+)
             </a>
-            <a 
-              href="#about" 
-              className="border border-primary text-primary px-8 py-3 rounded-full text-lg font-medium hover:bg-primary/10 transition-colors"
+            <Button
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10 px-8 py-6 rounded-full text-lg font-medium w-full md:w-auto"
             >
-              Learn More
-            </a>
+              <Download className="mr-2" />
+              Download CV
+            </Button>
           </motion.div>
         </motion.div>
       </div>
