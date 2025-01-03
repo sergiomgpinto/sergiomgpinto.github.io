@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sergio-pinto.com/sitemap.xml
